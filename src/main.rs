@@ -1,5 +1,7 @@
 use std::io;
-extern crate num_integer;
+
+mod problem1;
+mod problem2;
 
 fn main() {
     println!("Which Project Euler Problem to solve?");
@@ -19,7 +21,7 @@ fn main() {
             },
         };
 
-        if project > 1 {
+        if project > 2 {
             println!("Which Project Euler Problem to solve?");
             continue
         }
@@ -31,27 +33,8 @@ fn main() {
     println!("Solving problem: {}", project);
     
     if project == 1 {
-        problem_one();
+        problem1::main();
+    } else if project == 2 {
+        problem2::main();
     }
-}
-
-fn problem_one() {
-    let mut multiples: Vec<u32> = Vec::new();
-    let mut sum: u32 = 0;
-    
-    for num in 1..1000  {
-        let (_div3, _rem3) = num_integer::div_rem(num, 3);
-        let (_div5, _rem5) = num_integer::div_rem(num, 5);
-
-        if _rem3 == 0 || _rem5 == 0 {
-            multiples.push(num);
-            sum += num;
-        }
-    }
-
-    // for x in &multiples {
-    //     println!("{}", x);
-    // }
-
-    println!("sum = {}", sum);
 }
