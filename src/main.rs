@@ -1,5 +1,3 @@
-use std::io;
-
 mod problem001;
 mod problem002;
 mod problem003;
@@ -13,7 +11,7 @@ fn main() {
         println!("Which Project Euler Problem to solve?");
 
         let mut input = String::new();
-        io::stdin().read_line(&mut input)
+        std::io::stdin().read_line(&mut input)
             .expect("Failed to read line");
 
         project = match input.trim().parse() {

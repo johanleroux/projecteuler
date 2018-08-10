@@ -1,5 +1,3 @@
-extern crate num_integer;
-
 pub fn main() {
     let mut fib_sum = 0;
     let mut even_sum = 0;
@@ -11,8 +9,7 @@ pub fn main() {
 		last = current;
 		current = fib_sum;
 
-        let (_div, _rem) = num_integer::div_rem(current, 2);
-        if _rem == 0 {
+        if current % 2 == 0 {
             even_sum += current;
         }
 	}
