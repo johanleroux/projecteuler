@@ -1,5 +1,3 @@
-extern crate num_integer;
-
 pub fn main() {
     let factors: Vec<u64> = factors(600851475143);
     println!("Factors: {:?}", factors);
