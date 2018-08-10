@@ -1,8 +1,8 @@
 use std::io;
 
-mod problem1;
-mod problem2;
-mod problem3;
+mod problem001;
+mod problem002;
+mod problem003;
 
 fn main() {
     println!("Which Project Euler Problem to solve?");
@@ -34,10 +34,10 @@ fn main() {
     println!("Solving problem: {}", project);
     
     if project == 1 {
-        problem1::main();
+        problem001::main();
     } else if project == 2 {
-        problem2::main();
+        problem002::main();
     } else if project == 3 {
-        problem3::main();
+        problem003::main();
     }
 }

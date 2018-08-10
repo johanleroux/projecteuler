@@ -7,6 +7,7 @@ pub fn main() {
     let primes: Vec<u64> = primes(factors);
     println!("Prime Factors: {:?}", primes);
     
+    println!("Highest Prime Factors: {}", primes[primes.len()-1]);
 }
 
 fn factors(number: u64) -> Vec<u64> {
