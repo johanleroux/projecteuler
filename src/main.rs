@@ -2,6 +2,7 @@ use std::io;
 
 mod problem1;
 mod problem2;
+mod problem3;
 
 fn main() {
     println!("Which Project Euler Problem to solve?");
@@ -21,7 +22,7 @@ fn main() {
             },
         };
 
-        if project > 2 {
+        if project > 3 {
             println!("Which Project Euler Problem to solve?");
             continue
         }
@@ -36,5 +37,7 @@ fn main() {
         problem1::main();
     } else if project == 2 {
         problem2::main();
+    } else if project == 3 {
+        problem3::main();
     }
 }
