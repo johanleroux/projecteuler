@@ -7,6 +7,7 @@ mod problem006;
 mod problem007;
 mod problem008;
 mod problem009;
+mod problem010;
 
 fn main() {
     let mut project: u32;
@@ -46,6 +47,8 @@ fn main() {
             problem008::main();
         } else if project == 9 {
             problem009::main();
+        } else if project == 10 {
+            problem010::main();
         } else {
             println!("Problem not available");
             continue;
